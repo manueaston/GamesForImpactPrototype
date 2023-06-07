@@ -2,27 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ButtonMain : ButtonParent
 {
-    private SpriteRenderer spriteRenderer;
     GameManager gameManager;
     bool active = false;
 
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
+        base.Start(); // Calls parent button start function
         gameManager = FindObjectOfType<GameManager>();
-
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OnMouseDown() // Called when button is clicked
+    public override void ButtonPressed()
     {
         if (active)
         {
