@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance; // Game Manager is static, can be accessed anywhere
 
-    Button[] buttons;
+    ButtonMain[] buttons;
     int buttonsActive;
 
     private void Awake()
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttons = FindObjectsOfType<Button>();
+        buttons = FindObjectsOfType<ButtonMain>();
 
         InvokeRepeating("ActivateRandomButton", 1.0f, 1.0f); // active random button every 0.25 seconds after an intial time of 1 second
     }
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (buttonsActive < buttons.Length) // Does not execute if all buttons are activated
         {
-            Button selectedButton = buttons[Random.Range(0, buttons.Length)]; // Choose random button in array
+            ButtonMain selectedButton = buttons[Random.Range(0, buttons.Length)]; // Choose random button in array
 
             if (selectedButton.IsActive())
             {
