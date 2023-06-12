@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonMinimiseWindow : ButtonParent
 {
-    public GameObject window;
+    public GameObject window;  // Add window to toggle in instance
     bool windowActive;
 
     private void Awake()
