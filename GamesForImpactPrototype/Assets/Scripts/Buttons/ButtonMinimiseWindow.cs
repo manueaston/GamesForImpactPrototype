@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ButtonMinimiseWindow : ButtonParent
 {
-    public GameObject window;  // Add window to toggle in instance
+    GameObject window;  // Add window to toggle in instance - should be public
     bool windowActive;
 
     private void Awake()
     {
-        windowActive = false; // minimise window at start
-        window.SetActive(windowActive);
+        // temporarily set the window here - need to find workaround
+        window = GameObject.Find("ChatWindow");
+
+        // windowActive = false; // minimise window at start
+        // window.SetActive(windowActive);
     }
 
     public override void ButtonPressed()
