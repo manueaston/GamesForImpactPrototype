@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3823464198516935351}
   - component: {fileID: 6629785278852540302}
-  - component: {fileID: 7012296752223756879}
   - component: {fileID: 3268794832391152236}
   m_Layer: 0
   m_Name: AdvertWindow
@@ -82,18 +81,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.3}
   m_EdgeRadius: 0
---- !u!114 &7012296752223756879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726826724482939037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b389ccf10fc944b9b38ac876efb834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3268794832391152236
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,9 +10,9 @@ public class Scroll : MonoBehaviour
     bool canScroll;
 
     public GameObject content;
-    Vector3 contentPos;
+    public Vector3 contentPos;
     SpriteRenderer contentRenderer;
-    float contentLength;
+    public float contentLength;
 
     private Vector3 mouseDisplacement; // Displacement of mouse holding from centre of window
 
@@ -22,8 +22,11 @@ public class Scroll : MonoBehaviour
         canScroll = false;
 
         contentRenderer = content.GetComponent<SpriteRenderer>();
-        contentLength = contentRenderer.size.y;
+        contentLength = contentRenderer.bounds.size.y;
         contentPos = content.transform.position;
+
+        Debug.Log("content length = " + contentLength);
+        Debug.Log("window length = " + scrollWindowSize.y);
     }
 
     // Called when user first clicks on collider
@@ -57,7 +60,7 @@ public class Scroll : MonoBehaviour
 
     public void UpdateContent()
     {
-        contentLength = contentRenderer.size.y;
+        contentLength = contentRenderer.bounds.size.y;
     }
 
     void CheckBounds()
