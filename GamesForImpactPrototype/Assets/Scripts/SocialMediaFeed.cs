@@ -4,58 +4,79 @@ using UnityEngine;
 
 public class SocialMediaFeed : MonoBehaviour
 {
-    public Sprite testSprite;
+    public float minWaitTime;
+    public float maxWaitTime;
+
     public Sprite[] posts;
     public Sprite currentFeed;
-    public Texture2D newFeed;
+    float numPosts = 1.0f;
+    Vector3 postSize;
     SpriteRenderer contentRenderer;
 
     private void Start()
     {
         contentRenderer = GetComponent<SpriteRenderer>();
-        contentRenderer.sprite = testSprite;
+        currentFeed = contentRenderer.sprite;
+        postSize = contentRenderer.bounds.size; // world size of single post
 
-        currentFeed = testSprite;
-
-
-        NewPost();
+        StartCoroutine(WaitForNextPost());
     }
 
+    private void Awake()
+    {
+        Debug.Log("Awake");
+    }
+
+    IEnumerator WaitForNextPost()
+    {
+        yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
+        // Waits for a random number of seconds between min and max wait time before creating a new post
+
+        NewPost();
+        StartCoroutine(WaitForNextPost()); // Calls self at end to keep creating new posts
+    }
 
     public void NewPost()
     {
+        numPosts++;
+
         // Choose random post sprite from array
-        AddSprite(testSprite);
+        int newPostIndex = Random.Range(0, posts.Length);
 
-        currentFeed = Sprite.Create(newFeed, new Rect(0, 0, newFeed.width, newFeed.height), Vector2.zero);
-        contentRenderer.sprite = currentFeed;
-
-
-        // Add sprite onto existing post feed
-
-        // Update Scroll Content
+        // Add new post sprite to feed
+        AddSprite(posts[newPostIndex]);
     }
 
     void AddSprite(Sprite newPost)
     {
+        int currentWidth = currentFeed.texture.width;
+        int currentHeight = currentFeed.texture.height;
+        int postWidth = newPost.texture.width;
+        int postHeight = newPost.texture.height;
 
-        for (int x = 0; x < newPost.texture.width; x++)
+        var newFeed = new Texture2D(currentWidth, currentHeight + postHeight);
+
+        for (int x = 0; x < postWidth; x++)
         {
-            for (int y = 0; y < newPost.texture.height; y++)
+            for (int y = 0; y < postHeight; y++)
             {
                 newFeed.SetPixel(x, y, newPost.texture.GetPixel(x, y));
             }
         }
-        for (int x = 0; x < currentFeed.texture.width; x++)
+        for (int x = 0; x < currentWidth; x++)
         {
-            for (int y = 0; y < currentFeed.texture.height; y++)
+            for (int y = 0; y < currentHeight; y++)
             {
-                newFeed.SetPixel(x, y + newPost.texture.height, currentFeed.texture.GetPixel(x, y));
+                newFeed.SetPixel(x, y + postHeight, currentFeed.texture.GetPixel(x, y));
             }
         }
 
         newFeed.Apply();
-        
+        currentFeed = Sprite.Create(newFeed, new Rect(0, 0, newFeed.width, newFeed.height), new Vector2(0, 0));
+        contentRenderer.sprite = currentFeed;
+
+        //Vector3 currentPos = gameObject.transform.position;
+        //gameObject.transform.position = new Vector3(currentPos.x, currentPos.y + postSize.y / 2.0f, currentPos.z);
     }
 
 }

@@ -24,9 +24,6 @@ public class Scroll : MonoBehaviour
         contentRenderer = content.GetComponent<SpriteRenderer>();
         contentLength = contentRenderer.bounds.size.y;
         contentPos = content.transform.position;
-
-        Debug.Log("content length = " + contentLength);
-        Debug.Log("window length = " + scrollWindowSize.y);
     }
 
     // Called when user first clicks on collider
@@ -34,6 +31,8 @@ public class Scroll : MonoBehaviour
     {
         mouseDisplacement = content.transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition); // object pos - mouse pos
         canScroll = true;
+
+        UpdateContent();
     }
 
     private void OnMouseExit()
@@ -52,9 +51,13 @@ public class Scroll : MonoBehaviour
             // get mouse position, and move object Y
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             contentPos.y = mousePos.y + mouseDisplacement.y;
-            content.transform.position = contentPos;
 
-            CheckBounds();
+            if (!OutOfBounds())
+            {
+                content.transform.position = contentPos;
+                // move content to new position
+            }
+            // otherwise don't move because it will move content out of bounds
         }
     }
 
@@ -63,17 +66,21 @@ public class Scroll : MonoBehaviour
         contentLength = contentRenderer.bounds.size.y;
     }
 
-    void CheckBounds()
+    bool OutOfBounds()
     {
         // keep content within boundaries of sprite
 
-        if (contentPos.y + (contentLength / 2) > transform.position.y + (scrollWindowSize.y / 2))
+        if (contentPos.y > transform.position.y - (scrollWindowSize.y / 2))
         {
-            content.transform.position = new Vector3(contentPos.x, transform.position.y + (scrollWindowSize.y / 2) - (contentLength / 2), contentPos.z);
+            return true;
+            //content.transform.position = new Vector3(contentPos.x, transform.position.y - (scrollWindowSize.y / 2) + (contentLength / 2), contentPos.z);
         }
-        else if (contentPos.y - (contentLength / 2) < transform.position.y - (scrollWindowSize.y / 2))
+        if (contentPos.y + contentLength < transform.position.y + (scrollWindowSize.y / 2))
         {
-            content.transform.position = new Vector3(contentPos.x, transform.position.y - (scrollWindowSize.y / 2) + (contentLength / 2), contentPos.z);
+            return true;
+            //content.transform.position = new Vector3(contentPos.x, transform.position.y + (scrollWindowSize.y / 2) - (contentLength / 2), contentPos.z);
         }
+
+        return false;
     }
 }
