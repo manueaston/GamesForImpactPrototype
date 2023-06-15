@@ -45,5 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   advertWindow: {fileID: 1726826724482939037, guid: 02e462d9a43b24b4193e26d41d9b567c, type: 3}
+  chatNotifWindow: {fileID: 1726826724482939037, guid: 302cf5a7e3fe502429ab752c9c08134a, type: 3}
   adRateLowerLimit: 10
   adRateUpperLimit: 5
+  chatRateLowerLimit: 15
+  chatRateUpperLimit: 10
