@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 2618012413036331279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2.6, z: 0}
-  m_LocalScale: {x: 7.2961974, y: 0.2873412, z: 1}
+  m_LocalScale: {x: 1.885, y: 1.885, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3823464198516935351}
@@ -174,8 +174,8 @@ SpriteRenderer:
   m_SortingLayerID: -912341993
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.08670282, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3dd16187b9da2d34b8158f762d0a6f6f, type: 3}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -210,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2713241928964046917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.2951665, y: 5.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.23, z: 0}
+  m_LocalScale: {x: 1.130603, y: 1.0898, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3823464198516935351}
@@ -258,7 +258,7 @@ SpriteRenderer:
   m_SortingLayerID: -912341993
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0aec9861b0e590844889bbbf3dbb2d2a, type: 3}
   m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -277,6 +277,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3823464198516935351}
     m_Modifications:
+    - target: {fileID: -115006695765865517, guid: d1556db6d8f02494eb5f87486d121322, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e1986c9ae496263478af4ed5588e7484, type: 3}
     - target: {fileID: -115006695765865517, guid: d1556db6d8f02494eb5f87486d121322, type: 3}
       propertyPath: m_SortingLayer
       value: 2

@@ -144,3 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chat: {fileID: 0}
+  emotes:
+  - {fileID: 21300000, guid: 94b454254dfbe4e409e6231e7b21f8bb, type: 3}
+  - {fileID: 21300000, guid: fff7b1dda8cf8254cb6e234f2cb70a4c, type: 3}
+  - {fileID: 21300000, guid: 5148366599b09964991f2eb1ff11f452, type: 3}
+  - {fileID: 21300000, guid: a9f62f7694e0b304384766f71fe56e59, type: 3}
+  - {fileID: 21300000, guid: d50947504a7e4e84f8b3c3c81bec767b, type: 3}
+  - {fileID: 21300000, guid: f3cc9c84af44eda47ba5e648acdcdb77, type: 3}

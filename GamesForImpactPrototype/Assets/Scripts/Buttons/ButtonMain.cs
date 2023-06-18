@@ -7,6 +7,9 @@ public class ButtonMain : ButtonParent
     GameManager gameManager;
     bool active = false;
 
+    // sprites
+    public Sprite off, on, pressed;
+
     // Start is called before the first frame update
     new void Start()
     {
@@ -26,17 +29,18 @@ public class ButtonMain : ButtonParent
     public void Activate()
     {
         active = true;
-        spriteRenderer.color = Color.red;
+        spriteRenderer.sprite = on;
     }
 
     IEnumerator Deactivate() // Coroutine
     {
-        spriteRenderer.color = Color.white;
+        spriteRenderer.sprite = pressed;
 
         // Button cooldown //
         yield return new WaitForSeconds(0.5f);
         // Waits for 0.5 seconds before deactivating so that button isn't instantly reactivated
 
+        spriteRenderer.sprite = off;
         active = false;
         gameManager.ButtonDeactivated();
     }

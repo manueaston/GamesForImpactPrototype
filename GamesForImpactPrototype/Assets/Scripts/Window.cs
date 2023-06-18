@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class Window : MonoBehaviour
 {
-    private Vector3 mouseDisplacement; // Displacement of mouse holding from centre of window
+    // Displacement of mouse holding from centre of window
     // Stores displacement needed to stop window centre from snapping to mouse when being dragged
+    private Vector3 mouseDisplacement;
+
+    protected SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        // get SpriteRenderer of "base" gameobject
+        spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
