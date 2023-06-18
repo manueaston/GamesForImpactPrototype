@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class AdvertWindow : Window
 {
-    // Start is called before the first frame update
+    public Sprite[] sprites = new Sprite[2];
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        spriteRenderer.sprite = sprites[Random.Range(0, 2)];
     }
 }

@@ -9,11 +9,8 @@ public class ButtonMinimiseWindow : ButtonParent
 
     private void Awake()
     {
-        // temporarily set the window here - need to find workaround
+        // set the window
         window = GameObject.Find("ChatWindow");
-
-        // windowActive = false; // minimise window at start
-        // window.SetActive(windowActive);
     }
 
     public override void ButtonPressed()

@@ -10,29 +10,10 @@ public enum MsgType
 
 public class ChatMessage : MonoBehaviour
 {
-    public string msg;
+    protected SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        // should display message with text in the future
-        // SpriteRenderer child = GetComponentInChildren<SpriteRenderer>();
-        // switch (type)
-        // {
-        // case MsgType.Incoming:
-        //     child.color = Color.red;
-        //     break;
-        // case MsgType.Outgoing:
-        //     child.color = Color.blue;
-        //     break;
-        // default:
-        //     break;
-        // }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 }

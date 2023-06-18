@@ -236,7 +236,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1726826724482939037, guid: aaf15f43a7e303e41967ee26c68c54f1, type: 3}
       propertyPath: m_Name
-      value: MainTaskWindow (1)
+      value: MainTaskWindow
       objectReference: {fileID: 0}
     - target: {fileID: 3823464198516935351, guid: aaf15f43a7e303e41967ee26c68c54f1, type: 3}
       propertyPath: m_RootOrder

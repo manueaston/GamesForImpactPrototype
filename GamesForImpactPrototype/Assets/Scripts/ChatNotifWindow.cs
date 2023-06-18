@@ -10,7 +10,7 @@ public class ChatNotifWindow : Window
         // Should update a text element here, make a list of possible chat receipients/messages
         
         // before then, just check if chat window is open already
-        if (GameObject.Find("ChatWindow").activeSelf)
+        if (GameObject.Find("ChatWindow").transform.localScale != new Vector3(0.0f, 0.0f, 0.0f))
         {
             Debug.Log("Chat window open - cancelling notification");
             Destroy(gameObject);
