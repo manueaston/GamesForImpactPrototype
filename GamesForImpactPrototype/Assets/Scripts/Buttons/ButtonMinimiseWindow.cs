@@ -19,6 +19,18 @@ public class ButtonMinimiseWindow : ButtonParent
     public override void ButtonPressed()
     {
         windowActive = !windowActive; // toggle window 
-        window.SetActive(windowActive);
+        ToggleWindowVisibility(windowActive);
+    }
+
+    void ToggleWindowVisibility(bool Visible)
+    {
+        if (Visible)
+        {
+            window.transform.localScale = new Vector3(1, 1, 1);
+        }
+        else
+        {
+            window.transform.localScale = new Vector3(0, 0, 0); // Setting scale to (0, 0, 0) makes window invisible
+        }
     }
 }

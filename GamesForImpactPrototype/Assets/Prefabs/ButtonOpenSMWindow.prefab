@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 502823914237470108}
   - component: {fileID: -5751892239944561420}
   - component: {fileID: 2084002385817843244}
-  - component: {fileID: 488837898257160457}
+  - component: {fileID: -5751892239944561420}
+  - component: {fileID: 66820924555769037}
   m_Layer: 0
-  m_Name: ButtonOpenWindow
+  m_Name: ButtonOpenSMWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1350728267259971971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,11 +86,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -912341993
-  m_SortingLayer: 2
+  m_SortingLayerID: -1247905245
+  m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.10383281, g: 0.66695607, b: 0.9433962, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 537c640bc245d754fa43f4fa7ccad644, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +100,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &488837898257160457
-BoxCollider2D:
+--- !u!114 &-5751892239944561420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350728267259971971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552e2fdbaa6f4c64b9dd231aac710d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  window: {fileID: 0}
+--- !u!60 &66820924555769037
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,12 +149,43 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.057801142, y: 0.020419419}
+      - {x: 0.051627282, y: -0.020082787}
+      - {x: 0.042853855, y: 0.0010994468}
+      - {x: 0.02860471, y: 0.014051753}
+      - {x: 0.043531477, y: 0.028002005}
+      - {x: 0.04214965, y: 0.12090291}
+      - {x: 0.022720154, y: 0.1417384}
+      - {x: -0.0007922333, y: 0.14113666}
+      - {x: -0.011776722, y: 0.13155611}
+      - {x: -0.012570732, y: 0.1139895}
+      - {x: -0.034534127, y: 0.11391032}
+      - {x: -0.03980781, y: 0.1314655}
+      - {x: -0.049099587, y: 0.14289583}
+      - {x: -0.07135508, y: 0.14382638}
+      - {x: -0.083711796, y: 0.1337118}
+      - {x: -0.09207335, y: 0.12199642}
+      - {x: -0.09258986, y: 0.028323844}
+      - {x: -0.08146121, y: 0.014908302}
+      - {x: -0.112278566, y: -0.039082147}
+      - {x: -0.11281156, y: -0.11157879}
+      - {x: -0.08233467, y: -0.1429184}
+      - {x: 0.081995234, y: -0.1418005}
+      - {x: 0.100307845, y: -0.13131662}
+      - {x: 0.123033255, y: -0.11146794}
+      - {x: 0.120789394, y: -0.04102455}
+      - {x: 0.10448793, y: -0.02522271}
+      - {x: 0.105784036, y: -0.0058473544}
+      - {x: 0.12222192, y: 0.008616182}
+      - {x: 0.1207894, y: 0.030567706}
+      - {x: 0.11146905, y: 0.040693548}
+      - {x: 0.0802217, y: 0.042714193}
+  m_UseDelaunayMesh: 0
