@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1373995909}
+    - target: {fileID: -6880730729729698322, guid: c2ae30a9b7e32b94dbe1182b07a2bb4f, type: 3}
+      propertyPath: buttonSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6198566489732957325, guid: c2ae30a9b7e32b94dbe1182b07a2bb4f, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -707,6 +711,38 @@ PrefabInstance:
     - target: {fileID: 4775659700976410834, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: adRateLowerLimit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: adRateUpperLimit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: smRateLowerLimit
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: smRateUpperLimit
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: chatRateLowerLimit
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: chatRateUpperLimit
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: emailRateLowerLimit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5517411816143605647, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
+      propertyPath: emailRateUpperLimit
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7548226627179753260, guid: cf8d0b7244447dd4e908621cc0b9b706, type: 3}
       propertyPath: m_Name

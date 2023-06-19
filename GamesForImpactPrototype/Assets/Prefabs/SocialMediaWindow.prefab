@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6629785278852540302}
   - component: {fileID: 7012296752223756879}
   - component: {fileID: 1911098962830239949}
+  - component: {fileID: 3894364424172949032}
   m_Layer: 0
   m_Name: SocialMediaWindow
   m_TagString: Untagged
@@ -111,6 +112,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab62568afe3c80f438090e3048701e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &3894364424172949032
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726826724482939037}
+  m_Enabled: 1
+  m_SortingLayerID: 1171908239
+  m_SortingLayer: 3
+  m_SortingOrder: 2
+  m_SortAtRoot: 0
 --- !u!1 &2618012413036331279
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8402aef2b80786e44bf138f9dc44ea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minWaitTime: 2
-  maxWaitTime: 5
+  minWaitTime: 5
+  maxWaitTime: 25
   posts:
   - {fileID: 21300000, guid: d69462b93a194d44da928cfb7950a69b, type: 3}
   - {fileID: 21300000, guid: 1a2d4cadd1000c7429b27a9f81c182c2, type: 3}
