@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3823464198516935351}
   - component: {fileID: 6629785278852540302}
   - component: {fileID: 3268794832391152236}
+  - component: {fileID: 3287747037694406207}
   m_Layer: 0
   m_Name: AdvertWindow
   m_TagString: Untagged
@@ -96,6 +97,18 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: f3dc97d8cefc5ef4cbbc6d4839b62f92, type: 3}
   - {fileID: 21300000, guid: 2853800e8e95b944f8a3f9eef01a5d8b, type: 3}
+--- !u!210 &3287747037694406207
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726826724482939037}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &2618012413036331279
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1171908239
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 3dd16187b9da2d34b8158f762d0a6f6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
