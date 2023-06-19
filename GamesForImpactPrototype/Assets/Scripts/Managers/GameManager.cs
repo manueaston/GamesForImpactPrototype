@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(150.0f);
         
-        buttonTxt.text = buttonPresses.ToString();
+        buttonTxt.text = "You pressed\n" + buttonPresses.ToString() + "\nbuttons!";
         endScreen.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         yield return new WaitForSeconds(5.0f);
