@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static int buttonPresses = 0;
     public TextMeshProUGUI buttonTxt;
     public GameObject endScreen;
+    public float buttonSpeed;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         buttons = FindObjectsOfType<ButtonMain>();
 
-        InvokeRepeating("ActivateRandomButton", 1.0f, 1.0f); // active random button every 0.25 seconds after an intial time of 1 second
+        InvokeRepeating("ActivateRandomButton", 3.0f, buttonSpeed); // active random button every buttonSpeed seconds after an intial time of 3 seconds
     }
 
     void ActivateRandomButton()
