@@ -22,6 +22,7 @@ public class ButtonMain : ButtonParent
         if (active)
         {
             StartCoroutine(Deactivate());
+            GameManager.buttonPresses++;
         }
     }
 

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class ButtonMinimiseWindow : ButtonParent
 {
+    public string windowTitle;
     GameObject window;  // Add window to toggle in instance - should be public
     bool windowActive;
 
-    private void Awake()
+    new void Start()
     {
         // set the window
-        window = GameObject.Find("ChatWindow");
+        window = GameObject.Find(windowTitle);
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     public override void ButtonPressed()

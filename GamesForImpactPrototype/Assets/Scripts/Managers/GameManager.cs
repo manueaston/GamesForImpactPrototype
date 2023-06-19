@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,12 +9,19 @@ public class GameManager : MonoBehaviour
 
     ButtonMain[] buttons;
     int buttonsActive;
+    public static int buttonPresses = 0;
+    public TextMeshProUGUI buttonTxt;
+    public GameObject endScreen;
 
     private void Awake()
     {
         Instance = this;
 
         DontDestroyOnLoad(this.gameObject); // persists through scenes
+
+        // find button count text
+        buttonTxt = FindObjectOfType<TextMeshProUGUI>();
+        StartCoroutine("EndGame");
     }
 
     // Start is called before the first frame update
@@ -22,12 +30,6 @@ public class GameManager : MonoBehaviour
         buttons = FindObjectsOfType<ButtonMain>();
 
         InvokeRepeating("ActivateRandomButton", 1.0f, 1.0f); // active random button every 0.25 seconds after an intial time of 1 second
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void ActivateRandomButton()
@@ -52,5 +54,13 @@ public class GameManager : MonoBehaviour
     public void ButtonDeactivated()
     {
         buttonsActive--;
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(90.0f);
+        
+        buttonTxt.text = buttonPresses.ToString();
+        endScreen.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     }
 }
