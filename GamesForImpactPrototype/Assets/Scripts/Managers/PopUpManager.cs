@@ -108,6 +108,10 @@ public class PopUpManager : MonoBehaviour
 
     void CreateNewChat()
     {
+        if (GameObject.Find(chatNotifWindow.name) != null)
+        {
+            return;
+        }
         // Instantiate chat window at bottom left
         Instantiate(chatNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(150.0f, 120.0f, 100.0f)), Quaternion.identity);
     }
@@ -120,8 +124,12 @@ public class PopUpManager : MonoBehaviour
 
     void CreateNewSM()
     {
+        if (GameObject.Find(smNotifWindow.name) != null)
+        {
+            return;
+        }
         // Instantiate social media notification at top left
-        Instantiate(smNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(100.0f, Camera.main.pixelHeight - 120.0f, 100.0f)), Quaternion.identity);
+        Instantiate(smNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(150.0f, Camera.main.pixelHeight - 90.0f, 100.0f)), Quaternion.identity);
     }
 
     void GetNextEmailCountdown() // Get amount of time to wait before next email notification is created
@@ -132,7 +140,11 @@ public class PopUpManager : MonoBehaviour
 
     void CreateNewEmail()
     {
+        if (GameObject.Find(emailNotifWindow.name) != null)
+        {
+            return;
+        }
         // Instantiate email notification at top right
-        Instantiate(emailNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth - 150.0f, Camera.main.pixelHeight - 120.0f, 100.0f)), Quaternion.identity);
+        Instantiate(emailNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth - 150.0f, Camera.main.pixelHeight - 90.0f, 100.0f)), Quaternion.identity);
     }
 }
