@@ -24,7 +24,7 @@ public class SocialMediaFeed : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake");
+        Debug.Log("Social media window awake");
     }
 
     IEnumerator WaitForNextPost()

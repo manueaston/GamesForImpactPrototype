@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -32,6 +33,14 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("ActivateRandomButton", 1.0f, 1.0f); // active random button every 0.25 seconds after an intial time of 1 second
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     void ActivateRandomButton()
     {
         if (buttonsActive < buttons.Length) // Does not execute if all buttons are activated
@@ -58,9 +67,12 @@ public class GameManager : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(90.0f);
+        yield return new WaitForSeconds(150.0f);
         
         buttonTxt.text = buttonPresses.ToString();
         endScreen.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        yield return new WaitForSeconds(5.0f);
+        SceneManager.LoadScene(0);
     }
 }
