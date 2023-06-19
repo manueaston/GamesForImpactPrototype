@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 502823914237470108}
-  - component: {fileID: 7053935475113271508}
   - component: {fileID: 2084002385817843244}
   - component: {fileID: 488837898257160457}
+  - component: {fileID: 2378468275118638798}
   m_Layer: 0
   m_Name: ButtonOpenWindow
   m_TagString: Untagged
@@ -34,18 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7053935475113271508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350728267259971971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1b6409019e47b49ae4a2b8b614bfa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2084002385817843244
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -912341993
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.018987417, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -143,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2378468275118638798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350728267259971971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552e2fdbaa6f4c64b9dd231aac710d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowTitle: 

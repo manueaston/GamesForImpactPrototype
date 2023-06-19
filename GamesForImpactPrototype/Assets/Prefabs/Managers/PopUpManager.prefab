@@ -46,7 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   advertWindow: {fileID: 1726826724482939037, guid: 02e462d9a43b24b4193e26d41d9b567c, type: 3}
   chatNotifWindow: {fileID: 1726826724482939037, guid: 302cf5a7e3fe502429ab752c9c08134a, type: 3}
+  smNotifWindow: {fileID: 1726826724482939037, guid: a595d454d99d11a439a4d719e86858fc, type: 3}
+  emailNotifWindow: {fileID: 1726826724482939037, guid: ed6e6ee0d0fd9de4e8b37297bd2c610d, type: 3}
   adRateLowerLimit: 10
   adRateUpperLimit: 5
   chatRateLowerLimit: 15
   chatRateUpperLimit: 10
+  smRateLowerLimit: 20
+  smRateUpperLimit: 15
+  emailRateLowerLimit: 20
+  emailRateUpperLimit: 15

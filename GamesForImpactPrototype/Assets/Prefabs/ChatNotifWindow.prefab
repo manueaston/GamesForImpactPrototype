@@ -265,7 +265,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1171908239
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d9801705feab3b47a1412e2414db25d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552e2fdbaa6f4c64b9dd231aac710d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windowTitle: ChatWindow
 --- !u!1001 &1099658434829966598
 PrefabInstance:
   m_ObjectHideFlags: 0
