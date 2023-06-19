@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8402aef2b80786e44bf138f9dc44ea03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minWaitTime: 2
-  maxWaitTime: 5
+  minWaitTime: 5
+  maxWaitTime: 25
   posts:
   - {fileID: 21300000, guid: d69462b93a194d44da928cfb7950a69b, type: 3}
   - {fileID: 21300000, guid: 1a2d4cadd1000c7429b27a9f81c182c2, type: 3}

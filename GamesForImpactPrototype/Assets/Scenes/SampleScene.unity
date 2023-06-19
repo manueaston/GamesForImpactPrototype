@@ -613,6 +613,10 @@ PrefabInstance:
       propertyPath: endScreen
       value: 
       objectReference: {fileID: 1373995909}
+    - target: {fileID: -6880730729729698322, guid: c2ae30a9b7e32b94dbe1182b07a2bb4f, type: 3}
+      propertyPath: buttonSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6198566489732957325, guid: c2ae30a9b7e32b94dbe1182b07a2bb4f, type: 3}
       propertyPath: m_Name
       value: GameManager
