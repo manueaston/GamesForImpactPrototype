@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChatWindow : Window
 {
+    public ChatFeed feed;
+
     public GameObject outgoingMsg;
     public GameObject incomingMsg;
     public GameObject msgObj; // empty object which holds messages
@@ -41,14 +43,15 @@ public class ChatWindow : Window
 
     public void AddIncomingMessage(Sprite msg)
     {
+        feed.AddSprite(msg);
         // add new message as child to messages gameObject
-        GameObject newMsg = Instantiate(incomingMsg, new Vector2(msgObj.transform.position.x - 2.2f, msgObj.transform.position.y - 1.5f), Quaternion.identity, msgObj.transform);
-        // SpriteRenderer spriteRenderer = newMsg.GetComponent<SpriteRenderer>();
-        // SpriteRenderer spriteRenderer = newMsg.spriteRenderer;
-        SpriteRenderer spriteRenderer = newMsg.transform.GetChild(0).GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = msg;
+        // GameObject newMsg = Instantiate(incomingMsg, new Vector2(msgObj.transform.position.x - 2.2f, msgObj.transform.position.y - 1.5f), Quaternion.identity, msgObj.transform);
+        // // SpriteRenderer spriteRenderer = newMsg.GetComponent<SpriteRenderer>();
+        // // SpriteRenderer spriteRenderer = newMsg.spriteRenderer;
+        // SpriteRenderer spriteRenderer = newMsg.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        // spriteRenderer.sprite = msg;
 
-        ShuffleMessages();
+        // ShuffleMessages();
     }
 
     IEnumerator ScheduleIncomingMessage()
@@ -61,13 +64,14 @@ public class ChatWindow : Window
 
     public void AddOutgoingMessage(Sprite msg)
     {
+        feed.AddSprite(msg);
         // add new message as child to messages gameObject
-        GameObject newMsg = Instantiate(outgoingMsg, new Vector2(msgObj.transform.position.x + 4.25f, msgObj.transform.position.y - 1.9f), Quaternion.identity, msgObj.transform);
-        // SpriteRenderer spriteRenderer = newMsg.GetComponent<SpriteRenderer>();
-        // SpriteRenderer spriteRenderer = newMsg.spriteRenderer;
-        SpriteRenderer spriteRenderer = newMsg.transform.GetChild(0).GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = msg;
-        ShuffleMessages();
+        // GameObject newMsg = Instantiate(outgoingMsg, new Vector2(msgObj.transform.position.x + 4.25f, msgObj.transform.position.y - 1.9f), Quaternion.identity, msgObj.transform);
+        // // SpriteRenderer spriteRenderer = newMsg.GetComponent<SpriteRenderer>();
+        // // SpriteRenderer spriteRenderer = newMsg.spriteRenderer;
+        // SpriteRenderer spriteRenderer = newMsg.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        // spriteRenderer.sprite = msg;
+        // ShuffleMessages();
         // respond with incoming message
         StartCoroutine("ScheduleIncomingMessage");
     }
