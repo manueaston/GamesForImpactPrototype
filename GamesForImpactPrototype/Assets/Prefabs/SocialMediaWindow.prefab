@@ -643,6 +643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonCloseWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 2084002385817843244, guid: 4592fc4b78d9cf64fac01ad152ee22dc, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

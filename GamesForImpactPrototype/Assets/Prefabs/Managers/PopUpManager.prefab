@@ -50,9 +50,9 @@ MonoBehaviour:
   emailNotifWindow: {fileID: 1726826724482939037, guid: ed6e6ee0d0fd9de4e8b37297bd2c610d, type: 3}
   adRateLowerLimit: 10
   adRateUpperLimit: 5
-  chatRateLowerLimit: 15
-  chatRateUpperLimit: 10
-  smRateLowerLimit: 20
-  smRateUpperLimit: 15
-  emailRateLowerLimit: 20
-  emailRateUpperLimit: 15
+  chatRateLowerLimit: 25
+  chatRateUpperLimit: 20
+  smRateLowerLimit: 30
+  smRateUpperLimit: 25
+  emailRateLowerLimit: 30
+  emailRateUpperLimit: 25
