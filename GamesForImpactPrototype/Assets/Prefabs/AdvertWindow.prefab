@@ -97,6 +97,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: f3dc97d8cefc5ef4cbbc6d4839b62f92, type: 3}
   - {fileID: 21300000, guid: 2853800e8e95b944f8a3f9eef01a5d8b, type: 3}
+  - {fileID: 21300000, guid: 2db62b16e3a520a438afd08b93b19c03, type: 3}
 --- !u!210 &3287747037694406207
 SortingGroup:
   m_ObjectHideFlags: 0

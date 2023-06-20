@@ -128,6 +128,7 @@ public class PopUpManager : MonoBehaviour
         {
             return;
         }
+
         // Instantiate social media notification at top left
         Instantiate(smNotifWindow, Camera.main.ScreenToWorldPoint(new Vector3(150.0f, Camera.main.pixelHeight - 90.0f, 100.0f)), Quaternion.identity);
     }
