@@ -6,6 +6,8 @@ Final project for People & Games class, Year 2, Semester 1
 
 Created in Unity 2022.3.0f1
 
+Group Project
+
 Game: Button Press Inc.
 
 Game is a commentary on Continuous Partial Attention (Linda Stone, 1998) and its effect on modern life and productivity
