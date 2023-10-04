@@ -14,6 +14,13 @@ Game is a commentary on Continuous Partial Attention (Linda Stone, 1998) and its
 
 Research Statement: https://drive.google.com/file/d/1_utNjE6J-dIGpCyCz0KUPb3OvCu6i-Gr/view?usp=sharing
 
+Contributions:
+- Main button mechanic
+- Social Media window popup
+- Advert popups
+- Popup spawning system
+- Win/loss condition
+
 <h2>Goal and requirements</h2>
 Create an interactive artefact to present your perspective on a topic/theory of your choice
 
